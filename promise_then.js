@@ -13,26 +13,13 @@ promise1
     .then(value => { console.log(value) })
     .catch(err => { console.log(err) });
 
-const example2 = new Promise(function (resolve, reject) {
-    const string1 = "sup";
-    const string2 = "sup";
-    if (string1 === string2) {
-        resolve();
-    } else {
-        reject();
-    }
-});
+//********************************************************* */
 
-example2
-    .then(function () {
-        console.log("Promise resolved successfully");
-    })
-    .catch(err => { console.log(err) });
 
 const helperPromise = function () {
     const promise = new Promise(function (resolve, reject) {
-        const x = "geeksfosrgeeks";
-        const y = "geeksforgeeks";
+        const x = "geeksforgeeks";
+        const y = "geekssforgeeks";
         if (x === y) {
             resolve("Strings are same");
         } else {
@@ -53,3 +40,30 @@ async function demoPromise() {
 }
 
 demoPromise();
+
+//******************************************************
+
+const example2 = new Promise(function (resolve, reject) {
+    const string1 = "sup";
+    const string2 = "sup";
+    if (string1 === string2) {
+        resolve();
+    } else {
+        reject();
+    }
+});
+
+example2
+    .then(function () {
+        console.log("Promise resolved successfully");
+    })
+    .catch(err => { console.log(err) });
+
+
+
+
+
+
+
+
+
