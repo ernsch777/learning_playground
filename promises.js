@@ -1,36 +1,38 @@
-const makeRequest = (location) => {
-    return new Promise((resolve, reject) => {
-        if (location === 'google') {
-            resolve('google says hi')
-        } else {
-            reject('We can only talk to google')
-        }
-    })
-}
-const processRequest = (response) => {
-    return new Promise((resolve, reject) => {
-        console.log('Processing response')
-        resolve(`extra information + ${response}`)
-    })
+/*
+    1. Use the getCats, getDogs, and getBirds functions to retrieve data.
+    2. Call the superSecretOrder function and pass it a single (flat) array of all the animals.
+    3. Log to the console the result that superSecretOrder returns.
+*/
+
+
+function getCats(cb) {
+    const random = Math.random() * 1000
+    setTimeout(function () {
+        cb(["Meowsalot", "Purrsloud", "BiscuitMaker"])
+    }, random)
 }
 
-// makeRequest('google').then(response => {
-//     console.log('response has been received')
-//     return processRequest(response)
-// }).then(proceessedResponse => {
-//     console.log(proceessedResponse)
-// }).catch(err => {
-//     console.log(err)
-// })
-
-async function doWork() {
-    try {
-        const response = await makeRequest('google')
-        console.log('response received')
-        const processedResponse = await processRequest(response)
-        console.log(processedResponse)
-    } catch (err) {
-        console.log(err)
-    }
+function getDogs(cb) {
+    const random = Math.random() * 1000
+    setTimeout(function () {
+        cb(["EatsAnything", "Barksalot", "HeadTilt"])
+    }, random)
 }
-doWork()
+
+function getBirds(cb) {
+    const random = Math.random() * 1000
+    setTimeout(function () {
+        cb(["Scruffy", "Baldy", "Screech"])
+    }, random)
+}
+
+function superSecretOrder(items, cb) {
+    const random = Math.random() * 1000
+    setTimeout(function () {
+        cb([...items].sort())
+    }, random)
+}
+
+getCats(function (cats) {
+    console.log(cats)
+})
