@@ -2,4 +2,5 @@
 2. Let's get started!
 3. I think I am going with a boilerplate index.html file that I will just link to seveal different .js files as I see fit and work on specific issues and problems. 
 4. Finished 3 Project Euler problems which was fun, but I am going to head in a different direction for more practice.
-5. 
+5. Working through filtering, more APIs, and basic JavaScript. 
+6. 
